@@ -16,9 +16,9 @@ export default function KategoriList() {
   const [error, setError] = useState(null);
 
     // Fungsi untuk delete
-  const handleDelete = (id, nama) => {
+  const handleDelete = (id, kategoriMenu) => {
     Swal.fire({
-  title: "Are you sure wanna delete " + nama + "?",
+  title: "Are you sure wanna delete " + kategoriMenu + "?",
   text: "You won't be able to revert this!",
   icon: "warning",
   showCancelButton: true,
@@ -104,7 +104,7 @@ export default function KategoriList() {
             <tr key={kat._id}>
               <td>{kat.kategoriMenu}</td>
               <td>{kat.deskripsi}</td>
-              <td><button className="btn btn-danger" onClick={() => handleDelete(kat._id, kat.nama)}>Hapus</button></td>
+              <td><button className="btn btn-danger" onClick={() => handleDelete(kat._id, kat.kategoriMenu)}>Hapus</button></td>
             </tr>
           ))}
         </tbody>
