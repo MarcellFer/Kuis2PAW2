@@ -86,7 +86,7 @@ export default function KategoriList() {
   return (
     <div>
       <h1>Kategori List</h1>
-      <NavLink to="/fakultas/create" className="btn btn-primary mb-3">
+      <NavLink to="/kategori/create" className="btn btn-primary mb-3">
         Tambah Kategori
       </NavLink>
       <table className="table table-striped table-hover">
