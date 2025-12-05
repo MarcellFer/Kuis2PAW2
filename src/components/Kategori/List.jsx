@@ -104,6 +104,7 @@ export default function KategoriList() {
             <tr key={kat._id}>
               <td>{kat.kategoriMenu}</td>
               <td>{kat.deskripsi}</td>
+              <NavLink to={`/kategori/edit/${kat._id}`} className="btn btn-warning me-2">Edit</NavLink>
               <td><button className="btn btn-danger" onClick={() => handleDelete(kat._id, kat.kategoriMenu)}>Hapus</button></td>
             </tr>
           ))}

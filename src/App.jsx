@@ -9,8 +9,10 @@ import React, { Suspense } from "react";
 const Home = React.lazy(() => import("./components/Home"));
 const MenuList = React.lazy(() => import("./components/Menu/List"));
 const MenuCreate = React.lazy(() => import("./components/Menu/Create"));
+const MenuEdit = React.lazy(() => import("./components/Menu/Edit"));
 const KategoriList = React.lazy(() => import("./components/Kategori/List"));
 const KategoriCreate = React.lazy(() => import("./components/Kategori/Create"));
+const KategoriEdit = React.lazy(() => import("./components/Kategori/Edit"));
 
 
 function App() {
@@ -58,8 +60,10 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/menu" element={<MenuList />} />
           <Route path="/menu/create" element={<MenuCreate />} />
+          <Route path="/menu/edit/:id" element={<MenuEdit />} />
           <Route path="/kategori" element={<KategoriList />} />
           <Route path="/kategori/create" element={<KategoriCreate />} />
+          <Route path="/kategori/edit/:id" element={<KategoriEdit />} />
         </Routes>
       </Suspense>
     </Router>

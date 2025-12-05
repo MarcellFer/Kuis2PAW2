@@ -96,6 +96,7 @@ export default function MenuList() {
             <th>Harga</th>
             <th>Rating</th>
             <th>kategori</th>
+            <th>Edit</th>
             <th>Aksi</th>
           </tr>
         </thead>
@@ -108,6 +109,7 @@ export default function MenuList() {
               <td>{menu.harga}</td>
               <td>{menu.rating}</td>
               <td>{menu.kategori_id ? menu.kategori_id.kategoriMenu : null}</td>
+              <NavLink to={`/menu/edit/${menu._id}`} className="btn btn-warning me-2">Edit</NavLink>
               <td><button className="btn btn-danger" onClick={() => handleDelete(menu._id, menu.namaMenu)}>Hapus</button></td>
             </tr>
           ))}
